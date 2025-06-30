@@ -275,27 +275,21 @@ body {
   font-family: Roboto;
   font-size: 16px;
 }
-
-/* Scrollbar width */
 .project-description::-webkit-scrollbar {
   width: 12px;
 }
-
-/* Scrollbar track */
 .project-description::-webkit-scrollbar-track {
-  background: transparent; /* white track */
+  background: transparent;
   border-radius: 8px;
 }
 
-/* Scrollbar thumb */
 .project-description::-webkit-scrollbar-thumb {
-  background-color: transparent; /* grey thumb */
+  background-color: transparent;
   border-radius: 8px;
   border: 2px solid transparent;
   background-clip: padding-box;
 }
 
-/* Optional: on hover */
 .project-description::-webkit-scrollbar-thumb:hover {
   background-color: transparent;
 }
@@ -352,26 +346,27 @@ body {
   outline: none;
   cursor: grab;
 }
-/* Scrollbar width */
+
+.hamburger {
+  display: none;
+}
+
 .certificate-list-container::-webkit-scrollbar {
   width: 12px;
 }
 
-/* Scrollbar track */
 .certificate-list-container::-webkit-scrollbar-track {
-  background: transparent; /* white track */
+  background: transparent;
   border-radius: 8px;
 }
 
-/* Scrollbar thumb */
 .certificate-list-container::-webkit-scrollbar-thumb {
-  background-color: transparent; /* grey thumb */
+  background-color: transparent;
   border-radius: 8px;
   border: 2px solid transparent;
   background-clip: padding-box;
 }
 
-/* Optional: on hover */
 .certificate-list-container::-webkit-scrollbar-thumb:hover {
   background-color: transparent;
 }
@@ -538,4 +533,154 @@ body {
 .social-name {
   text-decoration: none;
   color: white;
+  font-family: Roboto;
+}
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    height: auto;
+    position: static;
+  }
+
+  .image-name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: none;
+    padding: 10px 0;
+    margin: 0;
+    border-top: 1px solid #444;
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .nav-list-button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    padding-left: 0px;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    border: none;
+  }
+
+  .nav-list-button:hover {
+    background-color: none;
+  }
+
+  .contact-button {
+    background-color: #7f7f7f;
+    border-radius: 5px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .about-image-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .about-image {
+    margin-right: 0;
+    margin-bottom: 15px;
+    height: 150px;
+    width: 150px;
+  }
+
+  .skills-container,
+  .project-container,
+  .certicates-container,
+  .form-container {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  .skills-list-container,
+  .projects-list-container,
+  .certificate-list-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .skills-list-item,
+  .project-item,
+  .certicates-item {
+    width: 90%;
+    margin: 0 0 10px 0;
+  }
+
+  .skills-container,
+  .project-container,
+  .certicates-container {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 2px solid #00ffcc;
+    border-radius: 6px;
+    animation: borderPulse 2s infinite ease-in-out;
+  }
+
+  .form-msg-container {
+    flex-direction: column;
+  }
+
+  .form-name-container,
+  .msg-container {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+
+  .social-media-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .social-media {
+    margin-bottom: 10px;
+  }
+
+  .skills-heading,
+  .project-heading {
+    font-size: 22px;
+    text-align: center;
+  }
 }
